@@ -56,7 +56,7 @@ class Solution:
         def helper(node, lb, ub):
             if not node:
                 return True
-
+            
             if lb != None and ub != None:
                 if node.val <= lb or node.val >= ub:
                     return False
@@ -66,24 +66,8 @@ class Solution:
             elif lb == None and ub != None:
                 if node.val >= ub:
                     return False
-
-            if node.left and node.right:
-                if node.left.val >= node.val or node.right.val <= node.val:
-                    return False
-                else:
-                    return helper(node.left, lb, node.val) and helper(
-                        node.right, node.val, ub)
-            elif node.left and not node.right:
-                if node.left.val >= node.val:
-                    return False
-                else:
-                    return helper(node.left, lb, node.val)
-            elif not node.left and node.right:
-                if node.right.val <= node.val:
-                    return False
-                else:
-                    return helper(node.right, node.val, ub)
-
-            return True
+            
+            return helper(node.left, lb, node.val) and helper(node.right, node.val, ub)
+        
 
         return helper(root, None, None)
