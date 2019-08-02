@@ -18,5 +18,13 @@ class Solution:
         from queue import PriorityQueue
         
         q = PriorityQueue(k)
+        for x in nums[:k]:
+            q.put(x)
 
+        for x in nums[k:]:
+            if x > q.queue[0]:
+                q.get()
+                q.put(x)
+
+        return q.get() 
         
