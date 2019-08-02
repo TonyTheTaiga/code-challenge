@@ -31,3 +31,15 @@ Explanation: The LCA of nodes 5 and 4 is 5, since a node can be a descendant of 
 
 class Solution:
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+        if not root:
+            return None
+        if root in (p,q):
+            return root
+        right = self.lowestCommonAncestor(root.right, p, q)
+        left = self.lowestCommonAncestor(root.left, p, q)
+        if right and left:
+            return root
+        elif right and not left:
+            return right
+        elif left and not right:
+            return left
