@@ -6,7 +6,11 @@
 class Solution {
 public:
     int romanToInt(string s) {
+        int ret = 0;
+        for (char romanChar  : s)
+        {
         
+        }
     }
 };
 
