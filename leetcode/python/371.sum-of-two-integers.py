@@ -4,6 +4,10 @@
 # [371] Sum of Two Integers
 #
 class Solution:
+    def int_to_bytes(x: int):
+        
+
+
     def getSum(self, a: int, b: int) -> int:
         
 

@@ -1,2 +1,1 @@
-# leetcode
-my repo for leetcode solutions
+Repo for online code challenge sites
