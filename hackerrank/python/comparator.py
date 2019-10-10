@@ -11,5 +11,4 @@ class Player:
             return -1
         elif a.score == b.score:
             return -1 if a.name < b.name else 1
-        else:
-            return 1
+        return 1
