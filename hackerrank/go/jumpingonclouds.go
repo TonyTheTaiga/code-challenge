@@ -1,3 +1,4 @@
+// Complete the jumpingOnClouds function below.
 func jumpingOnClouds(c []int32) int {
 	temp := make([]int32, 0)
 	steps := 0
@@ -17,4 +18,4 @@ func jumpingOnClouds(c []int32) int {
 	}
 
 	return steps
-}   
+}
